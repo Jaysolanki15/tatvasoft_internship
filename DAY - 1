@@ -1,0 +1,4 @@
+📝 Day 1 - Introduction to PostgreSQL and Hands-on Practice:
+On the first day of my internship, we were introduced to PostgreSQL, an open-source, object-relational database management system. The session covered the basics of relational databases and the key features that make PostgreSQL powerful and reliable for data-driven applications. We discussed its architecture, use cases, and how it differs from other SQL databases like MySQL.
+After the theoretical overview, we got hands-on experience by setting up a PostgreSQL environment, creating our first databases, and writing simple SQL queries. This practical session helped reinforce our understanding and gave us a strong foundation to build upon in the upcoming days.
+
