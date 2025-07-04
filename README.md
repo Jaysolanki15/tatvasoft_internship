@@ -1,25 +1,59 @@
-# tatvasoft_internship
-This is made for my internship at tatvasoft . This include my work that i have done  on daily basis .
+# StudentForm
 
-📝 Day 1 - Introduction to PostgreSQL and Hands-on Practice
-On the first day of my internship, we were introduced to PostgreSQL, an open-source, object-relational database management system. The session covered the basics of relational databases and the key features that make PostgreSQL powerful and reliable for data-driven applications. We discussed its architecture, use cases, and how it differs from other SQL databases like MySQL.
-After the theoretical overview, we got hands-on experience by setting up a PostgreSQL environment, creating our first databases, and writing simple SQL queries. This practical session helped reinforce our understanding and gave us a strong foundation to build upon in the upcoming days.
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
 
+## Development server
 
-📝 Day 2 – Learning Angular & Building a Resume Generator
-On Day 2 of my internship, I started learning Angular, a popular framework used to build dynamic websites and applications. I learned the basics like:
+To start a local development server, run:
 
-What components and modules are
+```bash
+ng serve
+```
 
-How Angular uses templates
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-How to show data and respond to user input
+## Code scaffolding
 
-To put this into practice, I built a Resume Builder project using Angular. It lets users fill in their personal and career details, and then it automatically creates a resume using a fixed, professional layout.
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
 
-This mini-project helped me understand how Angular works in real-world scenarios—especially things like forms, data binding, and displaying information in a clean format. It was a fun and valuable learning experience!
-IMAGES:
-![image](https://github.com/user-attachments/assets/19153d1d-6368-4bf9-ae43-ec0e5bf13c0d)
+```bash
+ng generate component component-name
+```
 
-![image](https://github.com/user-attachments/assets/92b27f7a-9deb-40db-9c8b-5c02cce36d3a)
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

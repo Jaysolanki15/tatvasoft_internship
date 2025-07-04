@@ -1,0 +1,164 @@
+
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault01">First name</label>
+      <input  [(ngModel)]="firstName" type="text" class="form-control" id="validationDefault01" placeholder="First name"  [ngStyle]="{borderColor: firstName ? 'green' : 'red'}" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Last name</label>
+      <input type="text" [(ngModel)]="lastName" class="form-control" id="validationDefault02" placeholder="Last name"  required>
+    </div>
+    <div class="form-row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="email" [(ngModel)]="email" class="form-control" id="inputEmail3" placeholder="Email" >
+    </div>
+  </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group">
+  <label for="phone">Phone</label>
+  <input
+    type="tel"
+    class="form-control"
+    id="phone"
+    name="phone"
+    [(ngModel)]="phone"
+    [ngClass]="{'valid-zip': phone.length == 10, 'invalid-zip': phone.length != 10}"
+    placeholder="9898989898" 
+    required
+  >
+</div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault04">Address</label>
+      <input type="text" [(ngModel)]="address" class="form-control" id="validationDefault04" placeholder="address" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault05">Education</label>
+      <input type="text" [(ngModel)]="degree" class="form-control" id="validationDefault05" placeholder="degree" required >
+      <input type="text" [(ngModel)]="college" class="form-control" id="validationDefault05" placeholder="college" required >
+      <input type="text" [(ngModel)]="year" class="form-control" id="validationDefault05" placeholder="year" required >
+    </div>
+    
+    <button (click)="AddED()">ADD Education</button>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+      <label class="form-check-label" for="invalidCheck2">
+        Agree to terms and conditions
+      </label>
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit">Submit form</button>
+
+<!-- 
+<div>
+    <p>Your name: {{firstName}} {{lastName}}</p>
+    <p>Username:{{userName}}</p>
+    <p>city:{{city}}</p>
+    <p>state:{{state}}</p>
+    <p>zip:{{zip}}</p>
+</div> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Preview</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+    .resume-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px 35px;
+      border: 2px solid #007bff;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .resume-header {
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 25px;
+      padding-bottom: 15px;
+    }
+    .resume-header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: #007bff;
+    }
+    .resume-header p {
+      margin: 5px 0 0 0;
+      color: #555;
+    }
+    .section-title {
+      color: #007bff;
+      font-size: 1.2em;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 3px;
+    }
+    .resume-section {
+      margin-bottom: 15px;
+    }
+    .resume-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .resume-list li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <div class="resume-header">
+      <h1>{{firstName}} {{lastName}}</h1>
+      <p>Email: {{email}} | Phone: {{phone}}</p>
+      <p>{{address}}</p>
+    </div>
+
+    <div class="resume-section">
+      <div class="section-title">Education</div>
+      <div *ngFor="let college of colleges; let i = index">
+        <strong>{{ degrees[i] }}</strong><br>
+        {{ college }}, {{ years[i] }}
+        <hr>
+        </div>
+    </div>
+
+    <div class="resume-section">
+      <div class="section-title">Experience</div>
+      <strong>Frontend Developer</strong> – ABC Company<br>
+      Jan 2023 – Present<br>
+      <ul class="resume-list">
+        <li>Developed responsive web applications using Angular and Bootstrap.</li>
+        <li>Collaborated with designers and backend developers to deliver seamless user experiences.</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <div class="section-title">Skills</div>
+      <ul class="resume-list">
+        <li>Angular</li>
+        <li>JavaScript</li>
+        <li>Bootstrap</li>
+        <li>HTML & CSS</li>
+      </ul>
+    </div>
+
+    <div class="resume-section">
+      <div class="section-title">Projects</div>
+      <strong>Personal Portfolio Website</strong><br>
+      Built a modern, responsive portfolio to showcase projects and skills.
+    </div>
+  </div>
+</body>
+</html>
